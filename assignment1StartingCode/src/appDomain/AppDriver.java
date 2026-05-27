@@ -15,9 +15,10 @@ public class AppDriver
 	 *  
 	 *  @param args The input to control the execution of the application.
 	 */
+	
 	public static void main( String[] args )
 	{
-
+		
 		// refer to demo00 BasicFileIO.java for a simple example on how to
 		// read data from a text file
 
@@ -26,11 +27,33 @@ public class AppDriver
 
 		// refer to demo02 Student.java for comparable implementation, and
 		// NameCompare.java or GradeCompare for comparator implementations
-		
+
 		// refer to demo02 KittySort.java on how to use a custom sorting
 		// algorithm on a list of comparables to sort using either the
 		// natural order (comparable) or other orders (comparators)
+		
 
+
+		
 	}
+
+	public void chooseCopmarator(char compType) {
+
+        switch (compType) {
+            case 'h':
+                
+                break;
+            case 'v':
+               
+                break;
+            case 'a':
+               
+                break;
+
+            
+        }
+
+    }   
+
 
 }
