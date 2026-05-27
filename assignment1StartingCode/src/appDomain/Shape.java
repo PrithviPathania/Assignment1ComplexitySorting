@@ -21,12 +21,10 @@ abstract public class Shape implements Comparable<Shape> {
     }
 
 
-    // Shapes are compared by their height.
+    // Shapes are compared by natural order.
     @Override
     public int compareTo(Shape s){
-		if ( this.getHeight() > s.getHeight() ) return 1;
-		else if ( this.getHeight() < s.getHeight() ) return -1;
-		else return 0;
+		return this.compareTo(s);
 	}
 
     public double getHeight() {

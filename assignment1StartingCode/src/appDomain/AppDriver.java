@@ -26,7 +26,7 @@ public class AppDriver
 
 		// refer to demo02 Student.java for comparable implementation, and
 		// NameCompare.java or GradeCompare for comparator implementations
-
+		
 		// refer to demo02 KittySort.java on how to use a custom sorting
 		// algorithm on a list of comparables to sort using either the
 		// natural order (comparable) or other orders (comparators)
