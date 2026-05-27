@@ -33,22 +33,22 @@ public class AppDriver
 		// refer to demo02 KittySort.java on how to use a custom sorting
 		// algorithm on a list of comparables to sort using either the
 		// natural order (comparable) or other orders (comparators)
+		
 
-
-
+		Comparator<Shape> shapeComparator = chooseCopmarator(args[0]);
 		
 	}
 
-	public Comparator<Shape> chooseCopmarator(char compType) {
+	public static Comparator<Shape> chooseCopmarator(String compType) {
 
         switch (compType) {
-            case 'h':
+            case "h":
 				return new HeightComparator();
                 
-            case 'v':
+            case "v":
                
                 return new VolumeComparator();
-            case 'a':
+            case "a":
                
                 return new BaseAreaComparator();
 
