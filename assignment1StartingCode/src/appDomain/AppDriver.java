@@ -1,5 +1,7 @@
 package appDomain;
 
+import java.util.Comparator;
+
 /**
  * <p>
  * This application driver code is designed to be used as a basis for the
@@ -31,28 +33,29 @@ public class AppDriver
 		// refer to demo02 KittySort.java on how to use a custom sorting
 		// algorithm on a list of comparables to sort using either the
 		// natural order (comparable) or other orders (comparators)
-		
+
 
 
 		
 	}
 
-	public void chooseCopmarator(char compType) {
+	public Comparator<Shape> chooseCopmarator(char compType) {
 
         switch (compType) {
             case 'h':
+				return new HeightComparator();
                 
-                break;
             case 'v':
                
-                break;
+                return new VolumeComparator();
             case 'a':
                
-                break;
+                return new BaseAreaComparator();
 
             
         }
 
+		return new DefaultComparator();
     }   
 
 
