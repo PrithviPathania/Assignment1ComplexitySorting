@@ -6,7 +6,7 @@ import java.util.Comparator;
  * Comparator implementation that compares two Shape objects based on their height.
  */
 public class HeightComparator implements Comparator<Shape> {
-
+	
     /**
      * Compares its two arguments for order based on height.
      * 

@@ -14,7 +14,7 @@ public class AppDriver
 {
 	/**
 	 *  The main method is the entry point of the application.
-	 *  
+	 *  @author Prithvi, Dmytro
 	 *  @param args The input to control the execution of the application.
 	 */
 	
@@ -35,10 +35,22 @@ public class AppDriver
 		// natural order (comparable) or other orders (comparators)
 		
 
-		Comparator<Shape> shapeComparator = chooseCopmarator(args[0]);
+		//Comparator<Shape> shapeComparator = chooseCopmarator(args[0]);
+		// replaced line above with default comparator to avoid out of bounds error when no arguments are provided & if whatever after '-t' is not provided or is invalid, it will default to the default comparator
+		Comparator<Shape> shapeComparator = new DefaultComparator();
+		for (String arg : args) {
+			 // Handle case-insensitivity
 		
-	}
-
+		    String lowerArg = arg.toLowerCase();
+		    //read "t' before reading choice for compare type 'h', 'v', 'a'
+		    if (lowerArg.startsWith("-t")) {
+		    	//read the compare type choice 'h' v' a' after 't'
+		   	 String compareType = lowerArg.substring(2); 
+		   	 //uses the switch case to choose the correct comparator based on the compare type choice
+		   	shapeComparator = chooseCopmarator(compareType);
+		   	}
+		    }}
+	
 	public static Comparator<Shape> chooseCopmarator(String compType) {
 
         switch (compType) {
